@@ -97,6 +97,7 @@ namespace PythonNetStubGenerator
             if (s == "from") return "from_";
             if (s == "del") return "del_";
             if (s == "None") return "None_";
+            if (s == "def") return "def_";
             return s;
         }
 
