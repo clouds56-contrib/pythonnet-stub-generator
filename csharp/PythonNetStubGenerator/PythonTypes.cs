@@ -154,6 +154,7 @@ namespace PythonNetStubGenerator
             if (t.IsArray)
             {
                 AddArrayDependency(true);
+                if (withGenericParams && t.GetElementType() == typeof(byte)) return "bytearray";
                 return !withGenericParams ? "Array_1" : $"Array_1[{t.GetElementType().ToPythonType()}]";
             }
 
